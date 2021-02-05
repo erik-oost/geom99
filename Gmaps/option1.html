@@ -51,14 +51,14 @@
         const infoTentRidge = new google.maps.InfoWindow({
             content: contentTentRidge,
         });
-        const marker = new google.maps.Marker({
+        const markerTentRidge = new google.maps.Marker({
             position: new google.maps.LatLng(50.84729, -115.35804),
-            map: map,
+            map,
             title: "Tent Ridge",
             icon: "http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png",
         });
-        marker.addListener("click", () => {
-            infowindow.open(map, marker);
+        markerTentRidge.addListener("click", () => {
+            infowindow.open(map, markerTentRidge);
         });
       }
     </script>
