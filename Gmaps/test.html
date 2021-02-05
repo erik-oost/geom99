@@ -1,204 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Hikes</title>
+    <title>Info Windows</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUm-DUI7fuo0JTQSYQPjPvrM1xvJ3aZXQ&callback=initMap" async defer></script>
-<style>
-* {
-  box-sizing: border-box;
-}
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
 
-body {
-  font-family: Arial, sans-serif;
-}
-
-/* .container {
-  position: relative;
-} */
-
-#map-container {
-  height: 0;
-  padding: 56.25% 0 0 0;
-  margin: auto;
-  position: relative;
-  border: solid 1px grey;
-}
-
-@media (min-width: 648px) {
-  #map-container {
-    overflow: hidden;
-  }
-}
-
-#map-overview {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 0 10px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: rgba(0,0,0,0.8);
-  background: white;
-  z-index: 10;
-  cursor: pointer;
-  border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
-}
-
-#map-overview.hidden {
-  display: none;
-}
-
-#map-center:hover {
-  color: black;
-}
-
-#map-canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  transition: width 0.4s ease-in-out;
-}
-
-@media (min-width: 648px) {
-  #map-canvas.zoomed {
-    width: 50%;
-  }
-}
-
-#map-info {
-    margin-bottom: 15px;
-  }
-
-#map-info .gp {
-  background: white;
-  display: none;
-  position: relative;
-  border: solid 1px grey;
-  overflow-y: auto;
-}
-
-@media (min-width: 648px) {
-  #map-info .gp {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-  }
-}
-
-#map-info .gp > * {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-#map-info .gp.shown {
-  display: block;
-}
-
-#map-info .gp img {
-  width: 100%;
-  display: block;
-}
-</style>
-<script>
-var responsiveZoom = (window.innerWidth < 768) ? 6.75 : 7.75;
-
-function initMap() {
-  var myLatlng = new google.maps.LatLng(50.7974444, 4.48544);
-  var mapOptions = {
-    zoom: responsiveZoom,
-    minZoom: 6,
-    maxZoom: 17,
-    zoomControl: true,
-    zoomControlOptions: {
-      style: google.maps.ZoomControlStyle.DEFAULT
-    },
-    center: myLatlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwheel: false,
-    panControl: false,
-    mapTypeControl: false,
-    scaleControl: false,
-    streetViewControl: false,
-    overviewMapControl: false,
-    rotateControl: false
-  };
-  var map = new google.maps.Map(
-    document.getElementById("map-canvas"),
-    mapOptions
-  );
-
-  // 
-  var markerTentRidge = new google.maps.Marker({
-    position: new google.maps.LatLng(50.84729, -115.35804),
-    map: map,
-    title: "Tent Ridge",
-    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-  });
-  google.maps.event.addListener(markerGPBrussels, "click", function() {
-    hideInfo();
-    showInfo(".brussels");
-    map.panTo(this.getPosition());
-    map.setZoom(16);
-  });
-
-  // ANTWERP
-  var markerGPAntwerp = new google.maps.Marker({
-    position: new google.maps.LatLng(51.221296, 4.399885),
-    map: map,
-    title: "Click here for Antwerp Grand-Place details",
-    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-  });
-  google.maps.event.addListener(markerGPAntwerp, "click", function() {
-    hideInfo();
-    showInfo(".antwerp");
-    map.panTo(this.getPosition());
-    map.setZoom(16);
-  });
-
-  // NAMUR
-  var markerGPNamur = new google.maps.Marker({
-    position: new google.maps.LatLng(50.463110, 4.867437),
-    map: map,
-    title: "Click here for Namur Grand-Place details",
-    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-  });
-  google.maps.event.addListener(markerGPNamur, "click", function() {
-    hideInfo();
-    showInfo(".namur");
-    map.panTo(this.getPosition());
-    map.setZoom(16);
-  });
-
-</script>
-</head>
-<body>
-<div style="position: relative">
-  <div id="map-container">
-    <div id="map-overview" class="hidden"></div>
-
-    <div id="map-canvas"></div>
-  </div>
-
-  <div id="map-info">
-    <div class="gp brussels">
-
-    </div>
-    
-    <div class="gp antwerp">
-
-    </div>
-    
-    <div class="gp namur">
-      
-    </div>
-  </div>
-</div>
-</body>
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      // This example displays a marker at the center of Australia.
+      // When the user clicks the marker, an info window opens.
+      function initMap() {
+        const uluru = { lat: -25.363, lng: 131.044 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        const contentString =
+          '<div id="content">' +
+          '<div id="siteNotice">' +
+          "</div>" +
+          '<h1 id="firstHeading" class="firstHeading">Uluru</h1>' +
+          '<div id="bodyContent">' +
+          "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
+          "sandstone rock formation in the southern part of the " +
+          "Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) " +
+          "south west of the nearest large town, Alice Springs; 450&#160;km " +
+          "(280&#160;mi) by road. Kata Tjuta and Uluru are the two major " +
+          "features of the Uluru - Kata Tjuta National Park. Uluru is " +
+          "sacred to the Pitjantjatjara and Yankunytjatjara, the " +
+          "Aboriginal people of the area. It has many springs, waterholes, " +
+          "rock caves and ancient paintings. Uluru is listed as a World " +
+          "Heritage Site.</p>" +
+          '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+          "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
+          "(last visited June 22, 2009).</p>" +
+          "</div>" +
+          "</div>";
+        const infowindow = new google.maps.InfoWindow({
+          content: contentString,
+        });
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map,
+          title: "Uluru (Ayers Rock)",
+        });
+        marker.addListener("click", () => {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
 </html>
