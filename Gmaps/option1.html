@@ -40,25 +40,93 @@
             "</div>" +
             '<h1 id="firstHeading" class="firstHeading">Tent Ridge</h1>' +
             '<div id="bodyContent">' +
-            "<p><b>Difficulty:</b> Hard " +
-            "<b>Length:</b> 10.9 km " +
-            "<b>Type:</b> Loop " +
-            " • #1 on my list of future hikes" +
-            " • Features a beautiful view of Spray Lakes Reservoir" +
-            " • Heavily trafficked and dog-friendly" +
+            "<p><b>Difficulty:</b> Hard <br>" +
+            "<b>Length:</b> 10.9 km <br>" +
+            "<b>Type:</b> Loop <br>" +
+            " • #1 on my list of future hikes<br>" +
+            " • Features a beautiful view of Spray Lakes Reservoir<br>" +
+            " • Heavily trafficked and dog-friendly<br>" +
             "</div>" +
             "</div>";
         const infoTentRidge = new google.maps.InfoWindow({
             content: contentTentRidge,
         });
         const markerTentRidge = new google.maps.Marker({
-            position: { lat: 50.84729, lng: -115.35804},
-            map,
+            position: new google.maps.LatLng(50.84729, -115.35804),
+            map: map,
             title: "Tent Ridge",
             icon: "http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png",
         });
         markerTentRidge.addListener("click", () => {
             infoTentRidge.open(map, markerTentRidge);
+        });
+        
+        // SULPHUR MOUNTAIN
+        const contentSulphurMountain =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Sulphur Mountain</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Difficulty:</b> Moderate <br>" +
+            "<b>Length:</b> 10.1 km <br>" +
+            "<b>Type:</b> Out & Back <br>" +
+            " • Best hiked in the fall to see larches<br>" +
+            " • Features beautiful forested areas<br>" +
+            " • Heavily trafficked and dog-friendly<br>" +
+            "</div>" +
+            "</div>";
+        const infoSulphurMountain = new google.maps.InfoWindow({
+            content: contentSulphurMountain,
+        });
+        const markerSulphurMountain = new google.maps.Marker({
+            position: new google.maps.LatLng(51.14908, -115.55903),
+            map: map,
+            title: "Suplhur Mountain",
+            icon: "http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png",
+        });
+        markerSulphurMountain.addListener("click", () => {
+            infoSulphurMountain.open(map, markerSulphurMountain);
+        });
+        
+        // JEWELL PASS
+        const markerJewellPass = new google.maps.Marker({
+            position: new google.maps.LatLng(51.03242, -115.03837),
+            map: map,
+            title: "Jewell Pass",
+            icon: "http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png",
+        });
+        
+        // JURA CREEK
+        const markerJuraCreek = new google.maps.Marker({
+            position: new google.maps.LatLng(51.06859, -115.13996),
+            map: map,
+            title: "Jura Creek",
+            icon: "http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"
+        });
+        
+        // GROTTO CANYON
+        const markerGrottoCanyon = new google.maps.Marker({
+            position: new google.maps.LatLng(51.0651, -115.20349),
+            map: map,
+            title: "Grotto Canyon",
+            icon: "http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"
+        });
+        
+        // HA LING PEAK
+        const markerHaLingPeak = new google.maps.Marker({
+            position: new google.maps.LatLng(51.06178, -115.41787),
+            map: map,
+            title: "Ha Ling Peak",
+            icon: "http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"
+        });
+        
+        // C LEVEL CIRQUE
+        const markerCLevelCirque = new google.maps.Marker({
+            position: new google.maps.LatLng(51.23688, -115.51964),
+            map: map,
+            title: "C Level Cirque",
+            icon: "http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"
         });
       }
     </script>
