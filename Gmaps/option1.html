@@ -30,11 +30,14 @@
             center: { lat: 51.0900, lng: -115.3442 },
             zoom: 10,
         });
+        
+        const iconBase = "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
+        
         var markerTentRidge = new google.maps.Marker({
             position: new google.maps.LatLng(50.84729, -115.35804),
             map: map,
             title: "Tent Ridge",
-            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+            icon: iconBase + "parking_lot_maps.png",
         });
         var markerSulphurMountain = new google.maps.Marker({
             position: new google.maps.LatLng(51.14908, -115.55903),
