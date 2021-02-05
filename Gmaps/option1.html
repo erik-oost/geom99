@@ -36,18 +36,6 @@
         });
         
         // TENT RIDGE
-        const markerTentRidge = new google.maps.Marker({
-            position: new google.maps.LatLng(50.84729, -115.35804),
-            map: map,
-            title: "Tent Ridge",
-            icon: "http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png",
-        });
-        const infoTentRidge = new google.maps.InfoWindow({
-            content: contentTentRidge,
-        });
-        markerTentRidge.addListener("click", () => {
-            infowindow.open(map, markerTentRidge);
-        });
         const contentTentRidge =
             '<div id="content">' +
             '<div id="siteNotice">' +
@@ -62,6 +50,18 @@
             " • Heavily trafficked and dog-friendly" +
             "</div>" +
             "</div>";
+        const infoTentRidge = new google.maps.InfoWindow({
+            content: contentTentRidge,
+        });
+        const markerTentRidge = new google.maps.Marker({
+            position: new google.maps.LatLng(50.84729, -115.35804),
+            map: map,
+            title: "Tent Ridge",
+            icon: "http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png",
+        });
+        markerTentRidge.addListener("click", () => {
+            infowindow.open(map, markerTentRidge);
+        });
         const markerSulphurMountain = new google.maps.Marker({
             position: new google.maps.LatLng(51.14908, -115.55903),
             map: map,
