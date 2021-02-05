@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Hikes</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUm-DUI7fuo0JTQSYQPjPvrM1xvJ3aZXQ&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      let map;
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 51.0900, lng: -115.3442 },
+            zoom: 8,
+        });
+        var markerTentRidge = new google.maps.Marker({
+            position: new google.maps.LatLng(50.84729, -115.35804),
+            map: map,
+            title: "Tent Ridge",
+            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        var markerJuraCreek = new google.maps.Marker({
+            position: new google.maps.LatLng(51.06859, -115.13996),
+            map: map,
+            title: "Jura Creek",
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
