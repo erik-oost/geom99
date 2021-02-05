@@ -46,6 +46,7 @@
         const map = new google.maps.Map(document.getElementById("map"), {
             center: { lat: 51.0900, lng: -115.3442 },
             zoom: 9,
+            mapTypeId: 'terrain',
         });
         
         // TENT RIDGE
@@ -254,7 +255,8 @@
     <h1>Erik's Past and Prospective Hikes</h1>
     <p>Being from a very flat place like Windsor, I am always excited when I get to visit my dad in Alberta. He lives near Canmore, which is a hotspot for great 
       hikes with great views. Every time I visit it is my goal to check some more off of my list. The map below shows some of the favorites I've already accomplished 
-    (the red pins), as well as some of the hikes I am most excited to try next (the blue pins)! 
+    (the red pins), as well as some of the hikes I am most excited to try next (the blue pins)! The pins are clickable to reveal more information I've collected 
+      about each hike, either through personal experience or my own research.
     <div id="map"></div>
   </body>
 </html>
