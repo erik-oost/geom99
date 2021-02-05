@@ -1,1 +1,251 @@
-https://maps.googleapis.com/maps/api/directions/json?origin=Caesars+Windsor&destination=Point+Pelee+National+Park&key=AIzaSyBUm-DUI7fuo0JTQSYQPjPvrM1xvJ3aZXQ
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<style>
+body {
+background-color: aliceblue;
+}
+
+h1 {
+  color: skyblue;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+}
+
+</style>
+<title>Directions API</title>
+</head>
+<body>
+<p><a src= "https://maps.googleapis.com/maps/api/directions/json?origin=Caesars+Windsor&destination=Point+Pelee+National+Park&key=AIzaSyBUm-DUI7fuo0JTQSYQPjPvrM1xvJ3aZXQ">https://maps.googleapis.com/maps/api/directions/json?origin=Caesars+Windsor&destination=Point+Pelee+National+Park&key=AIzaSyBUm-DUI7fuo0JTQSYQPjPvrM1xvJ3aZXQ</a>
+
+RESULTS:
+  {
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJqWH_798sO4gRg2mniPI_ecg",
+         "types" : [ "establishment", "lodging", "point_of_interest" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJXzEnaPqUOogRVKzhpnCrzII",
+         "types" : [ "establishment", "park", "point_of_interest", "tourist_attraction" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 42.32614359999999,
+               "lng" : -82.54899229999999
+            },
+            "southwest" : {
+               "lat" : 41.9868237,
+               "lng" : -83.0339455
+            }
+         },
+         "copyrights" : "Map data ©2021 Google",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "38.7 mi",
+                  "value" : 62324
+               },
+               "duration" : {
+                  "text" : "1 hour 1 min",
+                  "value" : 3632
+               },
+               "end_address" : "Point Pelee National Park, 1118 Point Pelee Dr, Leamington, ON N8H 3V4, Canada",
+               "end_location" : {
+                  "lat" : 41.9868237,
+                  "lng" : -82.54899229999999
+               },
+               "start_address" : "377 Riverside Dr E, Windsor, ON N9A 7H7, Canada",
+               "start_location" : {
+                  "lat" : 42.3205381,
+                  "lng" : -83.0339455
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "308 ft",
+                        "value" : 94
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 25
+                     },
+                     "end_location" : {
+                        "lat" : 42.3211044,
+                        "lng" : -83.03329069999999
+                     },
+                     "html_instructions" : "Head \u003cb\u003enortheast\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "kvhaGdqxyNACCEGIAACKAAAE?G?A?M?I?CAIAEACi@Og@O"
+                     },
+                     "start_location" : {
+                        "lat" : 42.3205381,
+                        "lng" : -83.0339455
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1.3 mi",
+                        "value" : 2052
+                     },
+                     "duration" : {
+                        "text" : "3 mins",
+                        "value" : 150
+                     },
+                     "end_location" : {
+                        "lat" : 42.32614359999999,
+                        "lng" : -83.0094924
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eRiverside Dr E\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "{yhaG`mxyNS}AWoBM{@WuBSkBQyASmB[kBU{AYeBEW_@sBQaAOu@K_@EUGQMe@wAaGU{@Sw@W}@AAwBiHESOg@Mc@Om@Ka@Ia@EUCMKk@Im@Ik@Gc@Im@SaBK{@Gk@E_@Ee@AQA[C_@Ag@GwAAUA]CcAASA[EwAA_@C[AQCU?CAOEa@WeB?GSmAGg@AEGg@C[C]C]AIASCgAe@cLa@qIE}@AY"
+                     },
+                     "start_location" : {
+                        "lat" : 42.3211044,
+                        "lng" : -83.03329069999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "7.3 mi",
+                        "value" : 11774
+                     },
+                     "duration" : {
+                        "text" : "17 mins",
+                        "value" : 1045
+                     },
+                     "end_location" : {
+                        "lat" : 42.2281779,
+                        "lng" : -82.96411259999999
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eWalker Rd\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "kyiaGhxsyN\\AxAOLCLCJCHE@AHCHGHGHGJGNKXQTOlAq@`Ai@\\Sj@e@PD`@_@NGdAk@bB}@`CsAtDwBhN{Ht@a@|Ay@x@c@pGmDxI_Ff@YvA{@r@_@t@c@t@c@nAq@`Ai@bAm@nBiAbBy@x@a@xAy@fKyFhAm@nEqCdAo@dAi@rEgC`@U`@UzEmCh@[^Sh@I^QVO`@UXO^WjAs@ZSPYTKxA{@fCwAzBoAlAs@dAm@j@[RKLADAB?d@WpC{ARIbLkGzHmE\\SRM~@e@fAs@XSNKFEBCDE@CFIRIdAi@~BkAJIhCcBZO@An@a@^Un@c@d@_@DEd@]b@[\\UZS@?fAo@DCxAw@nAq@rAs@nBeA~@g@zAy@`@Ur@_@PInCwALDD?D?b@OtBcAxCyAdAq@r@o@j@g@BCDK`@YpBeA`B{@dAk@z@g@~BqAjFuCxHeE^UvAw@bB{@~BqAz@c@~@i@rAs@nKyF^U|KeG|KcG`Ai@dAm@pAo@rDqBdK{FR@BAJEXQtAm@TQfBaADC@A@ADEJWvBeAhAo@LGtBkAfAk@zAy@dAk@t@a@VMBAPD@??A@?lBeANItCcBdB}@fAk@|A}@FAHA~@k@rBmAfE}BbDeB`Ac@^OXIpAY?Ar@Ip@AjA@dAHlCF?@p@@TFjA@xB@P@T?hCLzBHpCHf@Il@BH@`@@\\@xDLb@@jBF|Tn@rENb@Pl@DhBDT@rCAd@GN?dABV@lBBjCB`@@zOThBBN?hB@\\?zA@dEB~CBdABrB@vBF"
+                     },
+                     "start_location" : {
+                        "lat" : 42.32614359999999,
+                        "lng" : -83.0094924
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "22.9 mi",
+                        "value" : 36901
+                     },
+                     "duration" : {
+                        "text" : "27 mins",
+                        "value" : 1641
+                     },
+                     "end_location" : {
+                        "lat" : 42.06804109999999,
+                        "lng" : -82.598252
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eON-3 E\u003c/b\u003e (signs for \u003cb\u003eON-401 E\u003c/b\u003e)",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "cuv`Gt|jyNnABXyA@GHo@`@qC^gCReAPu@T{APeA?C\\sBTyADYbBuKf@gDvFw^~Eu[RmAf@aD|@cGr@yExEi[`AoGBSJs@PcAFc@`@iCvAmJh@oDvF}^lKqr@vIsk@|AeK`@gCZyBn@cELUBEPgAJm@R_ANo@Nk@Ni@Ng@Vw@b@eABErCoGj@eAbBoDt@{AxBuEZq@`@{@lAsChA}BhCoFrGgNtDcIh@iAnCwFlC{FxE_KbBoDfCgF|AeDxDoIpD{HjCmFvAyCdA{BlCaGp@wAzA_Dt@_BDItBuEfAkCf@aArBmEnAqCz@eBvEsJ`D}GdAyBTe@hBuDtByEjEeJfA{Bv@cBb@_Ab@{@^o@Vc@R]|@yA~@sAxAkBvIaLhCeDdAuAdAyA~AyB|QaVnFeHfF{GLOnA}A`AsARURUn@w@fAsAzC{DtC{DrCwD`BmCT_@hBkC~@sANWFW`@i@PYhCmDvCuDdA{ArCuDrAeB|HcKhEwFdAqAbEqFjDoEBCf@o@~@mAvDaFX_@tGsI`@g@^g@t@cAl@y@R[b@o@P[FKJOVe@Xk@Zk@Vi@\\w@Tg@\\}@Xw@Xy@Pi@X_Ad@eBv@wCLc@`CeJz@aDHWTy@b@wARs@Pg@h@}AL[bBwEr@iBn@_B^}@rAiDb@gA`DsIfCaH~@cCfAyCtBwFRc@Rg@Te@Pa@Ra@Pa@Tc@P_@^q@r@qAtB{Dn@kA|@cBr@sAx@aB|@iBZs@\\s@Xs@f@gAjAuCr@eBdAqCxA_EnCoH`CqGhCcHpBmFhCaHhBaF|@_Cf@wAjAsCd@gAb@gAv@cBd@cAZs@x@aB^u@h@cAt@wAbB{ChB}CdAeBlRw[lCqElH_MvDoGjCoEvE_I~EkIvBoDtBqDn@cA`@s@rBiDvCaFnAsBjCoEjCmEjAqBt@oAvBqDjD}FvCaF~CmFtBmDd@y@l@_A\\k@h@y@^k@fCwDxAqBnCiDPS\\a@VYX]pCaD`CmC~EsF`AiAzCkDvA_BdCqCjBwBvA}AtDiE|CkD`BkBfBoBxAcBxGuHjHiIbBmBxGsHpFiGjQcSvCgDbAkAxDkEt@{@HKjKqLl@o@xCiDjBuBp@u@l@q@jBwB~@eAr@w@~BmClC}CnBaCzDaFxAkBx]sd@~MiQv@cA~@oAh[oa@pAaB|ByC~@mAjE{FrGmIr@aAzBuCv@cAf@q@f@u@Va@Tc@^m@\\q@Ti@P_@N_@Rg@To@Xy@Vy@Nk@FSR{@Ja@Je@Lo@PeALs@Hq@Hq@Fk@H{@Fs@Dq@Bk@Bq@B}@LsHDoB@wAd@}\\h@g`@@o@NcK@o@HqFHaHXeSFoDDsC@}@FeGJ_GBsABwADwBFgDDaDJiG@w@FsCH}D?ALeENyD?A^}JZqIV_H|Bum@RoFF}A^cKDcADkAVqGReGD{AHaCHcDPiHBuB@_@BqBByA@yA?oADkJ@yB?mB?gA?iAA{B?w@AiCC_C?YAmAEgBCiBEsCKoECoAEmAOqFY_JQuFKgDUyHUyGSgHQyFQgFOqEMsEC{@IsBM{EKeECuAGmCCgBCgBAm@C{AAsBCeCA}AA}E?sCAoD@}B?yA?eA@sH"
+                     },
+                     "start_location" : {
+                        "lat" : 42.2281779,
+                        "lng" : -82.96411259999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "3.3 mi",
+                        "value" : 5280
+                     },
+                     "duration" : {
+                        "text" : "6 mins",
+                        "value" : 337
+                     },
+                     "end_location" : {
+                        "lat" : 42.03332470000001,
+                        "lng" : -82.5864308
+                     },
+                     "html_instructions" : "Continue onto \u003cb\u003eEssex 33\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "glw_G`ncwNAiG?_D?uCAsL?o@?oE@o@@g@Bi@@g@Di@Dk@Dk@H{@Js@Lu@Ls@No@Pu@FSNi@Vu@To@Re@JUBGRc@`@u@\\g@\\i@\\c@h@o@f@i@\\[d@a@f@_@r@c@r@_@v@]tAi@bFeBhOmFxCcAtAc@`Cy@VK`EoA~Am@vAi@@?`Bg@DAzCcAD?hCs@t@UxDkApBu@rA_@vAa@`@MVGrAKH?XAjAA|@DxCBhCJb@BdDNjFRtCNvE\\~CTl@BpBFfELzABhENxCLjGTpCDrHNb@@bINpGHA~AEnDWlRGfF"
+                     },
+                     "start_location" : {
+                        "lat" : 42.06804109999999,
+                        "lng" : -82.598252
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "3.8 mi",
+                        "value" : 6072
+                     },
+                     "duration" : {
+                        "text" : "7 mins",
+                        "value" : 394
+                     },
+                     "end_location" : {
+                        "lat" : 41.9879386,
+                        "lng" : -82.550027
+                     },
+                     "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eBevel Line Rd\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eEssex 33\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Essex 33\u003c/div\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "gsp_GddawNvB{BvE}EJMlFaGjCwC`EuEhDuDnByBrDcEt@y@fCmCnBwBhDsD`EkExGyHpCaDRUBCXUJI`@UPI`@Sb@G^G^ARAT?bQb@bFNrGRnCH|@Bv@?V?VANAZEfAOfDe@l@Il@Kf@Gb@IZIf@Qb@YVQ^[pLgOdBuBfMuOdIcJtPmQpBqBZ]vEuEFINKLGJE`@Kh@OTIRK\\UZ[jJgJj@e@tCcCjAcALOZ[xBaCp@o@|IsI|@}@lImHpFgF"
+                     },
+                     "start_location" : {
+                        "lat" : 42.03332470000001,
+                        "lng" : -82.5864308
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "495 ft",
+                        "value" : 151
+                     },
+                     "duration" : {
+                        "text" : "1 min",
+                        "value" : 40
+                     },
+                     "end_location" : {
+                        "lat" : 41.9868237,
+                        "lng" : -82.54899229999999
+                     },
+                     "html_instructions" : "Continue onto \u003cb\u003ePoint Pelee Dr\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                     "polyline" : {
+                        "points" : "swg_Gt`zvNfByArAoAb@e@"
+                     },
+                     "start_location" : {
+                        "lat" : 41.9879386,
+                        "lng" : -82.550027
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "kvhaGdqxyNOUG[?]COk@Sg@OS}Ae@kDqAiLqAeImAkGsBoIcAsD{CiKk@gCc@sCq@oFUcCO{DW{HG{@q@}EUqBKyAi@kNg@oKAY\\AfBSd@Of@[jAu@nC{AhAy@PD`@_@tAs@d[eQ~MmHlOuI|FcDrDwB|C{A`NsHxG_E`KwFfIsEh@I^Qx@e@`DoBPYTK`FsCzHmERKLAHAnRiKlLuGxByARWdFiCvEwCzB_BbCcB|N_IbEyBnCwALDJ?xCsAxCyAdAq@~AwAHOrC_BfDgB`VuMz\\wQ|[iQpUkMV?d@WtAm@TQlBeATa@dIiE~GsDZORDnBgAdDmBlDiBnDmBzHkEdFiCx@YpA[dBKpCJlCHp@@TFdEBf@@dGVpCHf@Iv@D~@Bf_@fArENb@PvCJhD?t@GvILvTZhLFpMPnABXyAJw@`AyGd@{BdAyGzToxAvLgx@`g@ydDjA}HP[`AeFfAuDf@kA~DuInHsOnBoErEmJbSmb@rQs_@tQ_`@|IoRlG_NfAkCf@aAbE_JzNqZ~B{E`I_QfE{IhCkExC_E`NgQjCoD|T{YtPoTxCwDbFoGhHsJvBmDhD_FNWFWr@cAzNuR|`@ih@fPcTdDmEpAsBxAmChBgE~A{ElFgS~BkI|AuEfF_NvBqFhHuRpGyPhDiHvG}LfEsIjDeIbJgVfOea@zGmQfDwH~CoGxCsFnDcG`f@yx@v^_n@d\\ej@rMwTtCqE`FiH`D}D`F{F`^_a@`h@cl@xnAqvApLeNnu@kaApv@wbAnGmItBiDtA{CzAkEv@}Cx@oEd@kETcEXyP`BykAfAqy@t@od@^yOjAk[tFizAl@gSZqPJoR@yJG}LKyH[aOgAo^eC_y@g@kRQkKKsLA_TAwn@@_GDqARiDToBZiBx@cDlAaDvAiCz@mApAyAbA}@zAcAjB}@xHoCzZoKxE{AvDwAdGmB~JuCdEuAxBo@VGrAKb@AhCBxCBhCJhER`Kb@vJr@~CJbHPbJ\\|KZvIPtQXGnG_@tYnIyIfQ}RbOmPbReSbMuNd@_@r@_@`@Sb@G~@Ih@AfXr@bL\\tBBzAIjIkAjAQbA[z@k@^[pLgOlPkSdIcJtPmQlCoC~E_F\\Sl@Q~@Yp@a@fKcK`EiDxAsAtC}CnKcKjKkJpFgFfByAvBuB"
+         },
+         "summary" : "ON-3 E",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}
+
+  
