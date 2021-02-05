@@ -59,7 +59,7 @@
             title: "Tent Ridge",
             icon: "http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png",
         });
-        markerTentRidge.addListener("click", () => {
+        marker.addListener("click", () => {
             infowindow.open(map, markerTentRidge);
         });
         const markerSulphurMountain = new google.maps.Marker({
