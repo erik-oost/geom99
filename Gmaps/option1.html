@@ -248,6 +248,17 @@
         markerCLevelCirque.addListener("click", () => {
             infoCLevelCirque.open(map, markerCLevelCirque);
         });
+        const legend = document.getElementById("legend");
+            const div1 = document.createElement("div1");
+            div1.innerHTML = '<img src="http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"> ' + 'Completed Hike';
+            legend.appendChild(div1);
+        
+            const div2 = document.createElement("div2");
+            div2.innerHTML = '<img src="http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png"> ' + 'Future Hike';
+            legend.appendChild(div2);
+        }
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+        }
       }
     </script>
   </head>
@@ -258,5 +269,6 @@
     (the red pins), as well as some of the hikes I am most excited to try next (the blue pins)! The pins are clickable to reveal more information I've collected 
       about each hike, either through personal experience or my own research.
     <div id="map"></div>
+    <div id="legend"><h3>Legend</h3></div>
   </body>
 </html>
