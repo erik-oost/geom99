@@ -36,25 +36,25 @@
           "</div>" +
           '<h1 id="firstHeading" class="firstHeading">Tent Ridge</h1>' +
           '<div id="bodyContent">' +
-          "<p><b>Difficulty:</b> Hard " +
-          "<b>Length:</b> 10.9 km " +
-          "<b>Type:</b> Loop " +
-          " • #1 on my list of future hikes" +
-          " • Features a beautiful view of Spray Lakes Reservoir" +
-          " • Heavily trafficked and dog-friendly" +
+          "<p><b>Difficulty:</b> Hard <br>" +
+          "<b>Length:</b> 10.9 km <br>" +
+          "<b>Type:</b> Loop <br>" +
+          " • #1 on my list of future hikes<br>" +
+          " • Features a beautiful view of Spray Lakes Reservoir<br>" +
+          " • Heavily trafficked and dog-friendly<br>" +
           "</div>" +
           "</div>";
         const infowindow = new google.maps.InfoWindow({
           content: contentString,
         });
-        const marker = new google.maps.Marker({
+        const markerTent = new google.maps.Marker({
           position: { lat: 50.84729, lng: -115.35804},
           map,
           title: "Tent Ridge",
           icon: "http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png",
         });
-        marker.addListener("click", () => {
-          infowindow.open(map, marker);
+        markerTent.addListener("click", () => {
+          infowindow.open(map, markerTent);
         });
       }
     </script>
