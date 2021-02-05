@@ -3,10 +3,10 @@
   <head>
     <title>Erik's Hikes</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <!-- <script
+    <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUm-DUI7fuo0JTQSYQPjPvrM1xvJ3aZXQ&callback=initMap&libraries=&v=weekly"
       defer
-    ></script> --> 
+    ></script>
     <style type="text/css">
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -40,22 +40,6 @@
         margin-right: 1;
         color: darkgreen;
       }
-      
-#legend {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  padding: 10px;
-  margin: 10px;
-  border: 3px solid #000;
-}
-
-#legend h3 {
-  margin-top: 0;
-}
-
-#legend img {
-  vertical-align: middle;
-}
     </style>
     <script>
       function initMap() {
@@ -264,17 +248,6 @@
         markerCLevelCirque.addListener("click", () => {
             infoCLevelCirque.open(map, markerCLevelCirque);
         });
-        const legend = document.getElementById("legend");
-            const div1 = document.createElement("div1");
-            div1.innerHTML = '<img src="http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"> ' + 'Completed Hike';
-            legend.appendChild(div1);
-        
-            const div2 = document.createElement("div2");
-            div2.innerHTML = '<img src="http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png"> ' + 'Future Hike';
-            legend.appendChild(div2);
-        }
-        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
-        }
       }
     </script>
   </head>
@@ -285,10 +258,5 @@
     (the red pins), as well as some of the hikes I am most excited to try next (the blue pins)! The pins are clickable to reveal more information I've collected 
       about each hike, either through personal experience or my own research.
     <div id="map"></div>
-    <div id="legend"><h3>Legend</h3></div>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUm-DUI7fuo0JTQSYQPjPvrM1xvJ3aZXQ&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
   </body>
 </html>
