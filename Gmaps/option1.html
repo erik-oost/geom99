@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Hikes</title>
+    <title>Erik's Hikes</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUm-DUI7fuo0JTQSYQPjPvrM1xvJ3aZXQ&callback=initMap&libraries=&v=weekly"
@@ -20,14 +20,14 @@
       html,
       body {
         height: 80%;
-        margin: 2%;
-        padding: 2%;
+        margin: 1%;
+        padding: 1%;
         background-color: #B9ECC7; 
       }
       
       h1 {
         font-family: Arial, sans-serif;
-        margin-top: 2%;
+        margin-top: 1%;
         margin-left: 1%;
         color: darkgreen;
       }
@@ -45,7 +45,7 @@
       function initMap() {
         const map = new google.maps.Map(document.getElementById("map"), {
             center: { lat: 51.0900, lng: -115.3442 },
-            zoom: 10,
+            zoom: 9,
         });
         
         // TENT RIDGE
