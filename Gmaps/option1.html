@@ -90,43 +90,147 @@
         });
         
         // JEWELL PASS
+        const contentJewellPass =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Jewell Pass</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Difficulty:</b> Moderate <br>" +
+            "<b>Length:</b> 15.9 km <br>" +
+            "<b>Type:</b> Loop <br>" +
+            " • Beautiful wildflowers in the summer<br>" +
+            " • Features a lake and a waterfall<br>" +
+            " • Heavily trafficked and dog-friendly<br>" +
+            "</div>" +
+            "</div>";
+        const infoJewellPass = new google.maps.InfoWindow({
+            content: contentJewellPass,
+        });
         const markerJewellPass = new google.maps.Marker({
             position: new google.maps.LatLng(51.03242, -115.03837),
             map: map,
             title: "Jewell Pass",
             icon: "http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png",
         });
+        markerJewellPass.addListener("click", () => {
+            infoJewellPass.open(map, markerJewellPass);
+        });
         
         // JURA CREEK
+        const contentJuraCreek =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Jura Creek</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>COMPLETED</b><br>
+            "<b>Difficulty:</b> Moderate <br>" +
+            "<b>Length:</b> 6.9 km <br>" +
+            "<b>Type:</b> Out & Back <br>" +
+            " • Adventure through the narrow canyon<br>" +
+            " • Features cascading pools and rock formations<br>" +
+            " • Can be very wet in the spring due to runoff<br>" +
+            "</div>" +
+            "</div>";
+        const infoJuraCreek = new google.maps.InfoWindow({
+            content: contentJuraCreek,
+        });
         const markerJuraCreek = new google.maps.Marker({
             position: new google.maps.LatLng(51.06859, -115.13996),
             map: map,
             title: "Jura Creek",
             icon: "http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"
         });
+        markerJuraCreek.addListener("click", () => {
+            infoJuraCreek.open(map, markerJuraCreek);
+        });
         
         // GROTTO CANYON
+        const contentGrottoCanyon =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Grotto Canyon</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>COMPLETED</b><br>
+            "<b>Difficulty:</b> Easy <br>" +
+            "<b>Length:</b> 7.1 km <br>" +
+            "<b>Type:</b> Out & Back <br>" +
+            " • Features a beautiful waterfall and inukshuk garden<br>" +
+            " • Features many areas with rock climbing installations<br>" +
+            " • Beautiful in the winter but can be slippery<br>" +
+            "</div>" +
+            "</div>";
+        const infoGrottoCanyon = new google.maps.InfoWindow({
+            content: contentGrottoCanyon,
+        });
         const markerGrottoCanyon = new google.maps.Marker({
             position: new google.maps.LatLng(51.0651, -115.20349),
             map: map,
             title: "Grotto Canyon",
             icon: "http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"
         });
+        markerGrottoCanyon.addListener("click", () => {
+            infoGrottoCanyon.open(map, markerGrottoCanyon);
+        });
         
         // HA LING PEAK
+        const contentHaLingPeak =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">Ha Ling Peak</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>COMPLETED</b><br>
+            "<b>Difficulty:</b> Moderate <br>" +
+            "<b>Length:</b> 7.2 km <br>" +
+            "<b>Type:</b> Out & Back <br>" +
+            " • Very steep elevation gain for the entire hike<br>" +
+            " • Scramble to the top for a wonderful view of Bow Valley<br>" +
+            " • Can be very busy in the summer<br>" +
+            "</div>" +
+            "</div>";
+        const infoHaLingPeak = new google.maps.InfoWindow({
+            content: contentHaLingPeak,
+        });
         const markerHaLingPeak = new google.maps.Marker({
             position: new google.maps.LatLng(51.06178, -115.41787),
             map: map,
             title: "Ha Ling Peak",
             icon: "http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"
         });
+        markerHaLingPeak.addListener("click", () => {
+            infoHaLingPeak.open(map, markerHaLingPeak);
+        });
         
         // C LEVEL CIRQUE
+        const contentCLevelCirque =
+            '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 id="firstHeading" class="firstHeading">C Level Cirque</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>COMPLETED</b><br>
+            "<b>Difficulty:</b> Moderate <br>" +
+            "<b>Length:</b> 12.1 km <br>" +
+            "<b>Type:</b> Out & Back <br>" +
+            " • Long period in the forest at the beginning<br>" +
+            " • Very steep climb at the very end to the lookout area<br>" +
+            " • Beautiful view of Lake Minnewanka<br>" +
+            "</div>" +
+            "</div>";
+        const infoCLevelCirque = new google.maps.InfoWindow({
+            content: contentCLevelCirque,
+        });
         const markerCLevelCirque = new google.maps.Marker({
             position: new google.maps.LatLng(51.23688, -115.51964),
             map: map,
             title: "C Level Cirque",
             icon: "http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"
+        });
+        markerCLevelCirque.addListener("click", () => {
+            infoCLevelCirque.open(map, markerCLevelCirque);
         });
       }
     </script>
