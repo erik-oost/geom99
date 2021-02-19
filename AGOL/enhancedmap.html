@@ -20,7 +20,7 @@
     <script src="https://js.arcgis.com/4.18/"></script>
     
     <script>
-      require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
+      require(["esri/config","esri/Map", "esri/views/MapView", "esri/geometry/Polyline"], function (esriConfig,Map, MapView, Polyline) {
         esriConfig.apiKey = "AAPKfdd88e071d0446d6b51de62e01ec4905QVKJcuqB6Q_emSVh-ePnRmQKEWn-ySG6ZB2g4WV7V-ZWndA3Z7MiNW3CrJss4gBJ";
 
         const map = new Map({
@@ -46,7 +46,7 @@
         // Create a symbol for drawing the line
         var lineSymbol = {
           type: "simple-line", // autocasts as SimpleLineSymbol()
-          color: [226, 119, 40],
+          color: [255,105,180],
           width: 4
         };
 
