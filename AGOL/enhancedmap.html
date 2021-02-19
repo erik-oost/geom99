@@ -33,58 +33,66 @@
           container: "viewDiv" // Div element
         });
         
+        /****************************
+         * Create a polyline graphic
+         ****************************/
+
         // First create a line geometry (this is the Keystone pipeline)
         var polyline = {
-        type: "polyline", // autocasts as new Polyline()
-        paths: [[-82.9444, 42.2762], [-82.9180, 42.3154], [-82.9451, 42.3334], [-82.9742691, 42.3061781], [-83.012376, 42.309842], [-83.0227, 42.2951], [-82.9444, 42.2762]]
+          type: "polyline", // autocasts as new Polyline()
+          paths: [[-82.9444, 42.2762], [-82.9180, 42.3154], [-82.9451, 42.3334], [-82.9742691, 42.3061781], [-83.012376, 42.309842], [-83.0227, 42.2951], [-82.9444, 42.2762]]
         };
 
         // Create a symbol for drawing the line
         var lineSymbol = {
-        type: "simple-line", // autocasts as SimpleLineSymbol()
-        color: [255,105,180],
-        width: 4
+          type: "simple-line", // autocasts as SimpleLineSymbol()
+          color: [226, 119, 40],
+          width: 4
         };
 
         // Create an object for storing attributes related to the line
         var lineAtt = {
-        Name: "Windsor Valentine's Day Tour",
-        Stops: "7 stops",
+          Name: "Keystone Pipeline",
+          Owner: "TransCanada",
+          Length: "3,456 km"
         };
 
-    /*******************************************
-   * Create a new graphic and add the geometry,
-   * symbol, and attributes to it. You may also
-   * add a simple PopupTemplate to the graphic.
-   * This allows users to view the graphic's
-   * attributes when it is clicked.
-   ******************************************/
+        /*******************************************
+         * Create a new graphic and add the geometry,
+         * symbol, and attributes to it. You may also
+         * add a simple PopupTemplate to the graphic.
+         * This allows users to view the graphic's
+         * attributes when it is clicked.
+         ******************************************/
         var polylineGraphic = new Graphic({
-        geometry: polyline,
-        symbol: lineSymbol,
-        attributes: lineAtt,
-        popupTemplate: {
-        // autocasts as new PopupTemplate()
-        title: "{Name}",
-        content: [
-        {
-          type: "fields",
-          fieldInfos: [
-            {
-              fieldName: "Name"
-            },
-            {
-              fieldName: "Stops"
-            }
-          ]
-        }
-      ]
-    }
-  });
+          geometry: polyline,
+          symbol: lineSymbol,
+          attributes: lineAtt,
+          popupTemplate: {
+            // autocasts as new PopupTemplate()
+            title: "{Name}",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "Name"
+                  },
+                  {
+                    fieldName: "Owner"
+                  },
+                  {
+                    fieldName: "Length"
+                  }
+                ]
+              }
+            ]
+          }
+        });
 
-  // Add the line graphic to the view's GraphicsLayer
-  view.graphics.add(polylineGraphic);
-      });
+        // Add the line graphic to the view's GraphicsLayer
+        view.graphics.add(polylineGraphic);
+        });
     </script>
   </head>
   <body>
