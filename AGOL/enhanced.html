@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>ArcGIS API for JavaScript Tutorials: Display a map</title>
+    <title>Enhanced Map</title>
 
     <style>
       html,
@@ -20,7 +20,7 @@
     <script src="https://js.arcgis.com/4.18/"></script>
     
     <script>
-      require(["esri/config","esri/Map", "esri/views/MapView", "esri/layers/GeoJSONLayer"], function (esriConfig,Map, MapView, GeoJSONLayer) {
+      require(["esri/config","esri/Map", "esri/views/MapView", "esri/layers/GeoJSONLayer", "esri/widgets/Search"], function (esriConfig,Map, MapView, GeoJSONLayer, Search) {
         esriConfig.apiKey = "AAPKfdd88e071d0446d6b51de62e01ec4905QVKJcuqB6Q_emSVh-ePnRmQKEWn-ySG6ZB2g4WV7V-ZWndA3Z7MiNW3CrJss4gBJ";
 
         const map = new Map({
@@ -40,6 +40,12 @@
         
          map.add(geoJSONLayer);  // adds the layer to the map
         });
+      
+        const search = new Search({  //Add Search widget
+        view: view
+        });
+
+        view.ui.add(search, "top-right"); //Add to the map
     </script>
   </head>
   <body>
