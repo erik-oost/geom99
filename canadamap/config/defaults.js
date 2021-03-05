@@ -126,7 +126,7 @@ define({
   //Add the geolocation button on the toolbar. Only displayed if browser supports geolocation
   "locate": true,
   "locate_track": true,
-  "locate_scale": 10,
+  "locate_scale": null,
 
   //When true display a scalebar on the map
   "scalebar": true,
