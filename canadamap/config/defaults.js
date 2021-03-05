@@ -50,7 +50,7 @@ define({
   //Color defines the text color for the title and details. Note that
   //both these values must be specified as hex colors.
   "customLayout": "default", // default, sidetools, menubar, rounded
-  "theme": "#105e78",
+  "theme": "#ff9900",
   "color": "#fff",
   "iconColor": "#fff",
   "panelBackground": "#fff",
