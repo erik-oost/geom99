@@ -102,8 +102,8 @@ define({
   //Set to "" to display no tools at startup
   "activeTool": null,
   //Add the geocoding tool next to the title bar.
-  "search": true,
-  "locationSearch": true,
+  "search": false,
+  "locationSearch": false,
   "popupPanel": false,
   //When searchExtent is true the locator will prioritize results within the current map extent.
   "searchExtent": false,
@@ -124,12 +124,12 @@ define({
   // when false hide the zoom (and home) buttons
   "showSlider": true,
   //Add the geolocation button on the toolbar. Only displayed if browser supports geolocation
-  "locate": false,
-  "locate_track": false,
-  "locate_scale": null,
+  "locate": true,
+  "locate_track": true,
+  "locate_scale": 10,
 
   //When true display a scalebar on the map
-  "scalebar": false,
+  "scalebar": true,
   //Specify a title for the application. If not provided the web map title is used.
   "title": "",
   //Optionally specify some sub title text.
